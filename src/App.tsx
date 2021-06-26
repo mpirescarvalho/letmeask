@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 import { NewRoom } from './pages/NewRoom';
 import { Home } from './pages/Home';
@@ -11,6 +12,8 @@ import { AuthContextProvider } from './contexts/AuthContext';
 import { ThemeContextProvider } from './contexts/ThemeContext';
 
 import { GlobalStyles } from './styles/global';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 	return (
@@ -29,6 +32,7 @@ function App() {
 
 			<ThemeToggle />
 			<GlobalStyles />
+			<ToastContainer />
 		</ThemeContextProvider>
 	);
 }

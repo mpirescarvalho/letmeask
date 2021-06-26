@@ -2,8 +2,7 @@
 
 - [x] Styled Components
 - [x] Themes
-- [ ] ESLint, Prettier
 - [ ] Use react-toastify
+- [ ] Change logo
 - [ ] Responsive CSS
-- [ ] PWA
 - [ ] Github README

@@ -1,5 +1,6 @@
 import { FormEvent, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import logoDarkImg from '../../assets/images/logo-dark.svg';
 import logoLightImg from '../../assets/images/logo-light.svg';
@@ -37,12 +38,16 @@ export function Home() {
 		const roomRef = await database.ref(`rooms/${roomCode}`).get();
 
 		if (!roomRef.exists()) {
-			alert('Room does not exists.');
+			toast.error('Room does not exists.', {
+				position: 'top-center',
+			});
 			return;
 		}
 
 		if (roomRef.val().endedAt) {
-			alert('Room already closed.');
+			toast.error('Room already closed.', {
+				position: 'top-center',
+			});
 			return;
 		}
 
