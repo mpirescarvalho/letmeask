@@ -7,19 +7,25 @@ import { AdminRoom } from './pages/AdminRoom';
 
 import { AuthContextProvider } from './contexts/AuthContext';
 
+import { GlobalStyles } from './styles/global';
+
 function App() {
 	return (
-		<BrowserRouter>
-			<AuthContextProvider>
-				<Switch>
-					<Route path="/" exact component={Home} />
-					<Route path="/rooms/new" component={NewRoom} />
-					<Route path="/rooms/:id" component={Room} />
+		<>
+			<BrowserRouter>
+				<AuthContextProvider>
+					<Switch>
+						<Route path="/" exact component={Home} />
+						<Route path="/rooms/new" component={NewRoom} />
+						<Route path="/rooms/:id" component={Room} />
 
-					<Route path="/admin/rooms/:id" component={AdminRoom} />
-				</Switch>
-			</AuthContextProvider>
-		</BrowserRouter>
+						<Route path="/admin/rooms/:id" component={AdminRoom} />
+					</Switch>
+				</AuthContextProvider>
+			</BrowserRouter>
+
+			<GlobalStyles />
+		</>
 	);
 }
 
