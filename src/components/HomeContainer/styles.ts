@@ -9,8 +9,8 @@ export const Container = styled.div`
 export const Aside = styled.aside`
 	flex: 6;
 
-	background: #835afd;
-	color: #fff;
+	background: ${({ theme }) => theme.colors.primary};
+	color: ${({ theme }) => theme.colors.textPrimaryInColor};
 
 	display: flex;
 	flex-direction: column;
@@ -32,7 +32,7 @@ export const Aside = styled.aside`
 		font-size: 24px;
 		line-height: 32px;
 		margin-top: 16px;
-		color: #f8f8f8;
+		color: ${({ theme }) => theme.colors.textSecondaryInColor};
 	}
 `;
 

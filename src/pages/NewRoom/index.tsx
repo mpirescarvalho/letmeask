@@ -1,17 +1,20 @@
 import { FormEvent, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
-import logoImg from '../../assets/images/logo.svg';
+import logoDarkImg from '../../assets/images/logo-dark.svg';
+import logoLightImg from '../../assets/images/logo-light.svg';
 
 import { HomeContainer } from '../../components/HomeContainer';
 import { Button } from '../../components/Button';
 import { database } from '../../services/firebase';
 import { useAuth } from '../../hooks/useAuth';
+import { useTheme } from '../../hooks/useTheme';
 
 import { Logo, Title, Form, NewRoomText } from './styles';
 
 export function NewRoom() {
 	const { user } = useAuth();
+	const { theme } = useTheme();
 	const history = useHistory();
 	const [newRoom, setNewRoom] = useState('');
 
@@ -34,7 +37,11 @@ export function NewRoom() {
 
 	return (
 		<HomeContainer>
-			<Logo src={logoImg} alt="Letmeask" />
+			{theme.title === 'light' ? (
+				<Logo src={logoLightImg} alt="Letmeask" />
+			) : (
+				<Logo src={logoDarkImg} alt="Letmeask" />
+			)}
 			<Title>Criar uma nova sala</Title>
 			<Form onSubmit={handleCreateRoom}>
 				<input

@@ -6,7 +6,7 @@ type ContainerProps = {
 };
 
 export const Container = styled.div<ContainerProps>`
-	background: #fefefe;
+	background: ${({ theme }) => theme.colors.backgroundLight};
 	border-radius: 8px;
 	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
 	padding: 24px;
@@ -18,22 +18,28 @@ export const Container = styled.div<ContainerProps>`
 	${({ highlighted }) =>
 		highlighted &&
 		css`
-			background: #f4f0ff;
-			border: 1px solid #835afd;
+			background: ${({ theme }) =>
+				theme.title === 'light'
+					? theme.colors.primaryUltraLight
+					: theme.colors.primaryUltraDark};
+			border: 1px solid ${({ theme }) => theme.colors.primary};
 
 			footer .user-info span {
-				color: #29292e;
+				color: ${({ theme }) => theme.colors.textPrimary};
 			}
 		`}
 
 	${({ answered }) =>
 		answered &&
 		css`
-			background: #dbdcdd;
+			background: ${({ theme }) =>
+				theme.title === 'light'
+					? theme.colors.backgroundDark
+					: theme.colors.border};
 		`}
 
 	p {
-		color: #29292e;
+		color: ${({ theme }) => theme.colors.textPrimary};
 	}
 `;
 
@@ -57,14 +63,20 @@ export const Footer = styled.footer`
 		&.like-button {
 			display: flex;
 			align-items: flex-end;
-			color: #737380;
+			color: ${({ theme }) => theme.colors.textSecondary};
 			gap: 8px;
 
 			&.liked {
-				color: #835afd;
+				color: ${({ theme }) =>
+					theme.title === 'light'
+						? theme.colors.primary
+						: theme.colors.primaryUltraLight};
 
 				svg path {
-					stroke: #835afd;
+					stroke: ${({ theme }) =>
+						theme.title === 'light'
+							? theme.colors.primary
+							: theme.colors.primaryUltraLight};
 				}
 			}
 		}
@@ -87,7 +99,7 @@ export const UserInfo = styled.div`
 
 	span {
 		margin-left: 8px;
-		color: #737380;
+		color: ${({ theme }) => theme.colors.textSecondary};
 		font-size: 14px;
 	}
 `;

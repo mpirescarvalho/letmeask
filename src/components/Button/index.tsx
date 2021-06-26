@@ -8,8 +8,14 @@ export const Button = styled.button<ButtonProps>`
 	height: 50px;
 	border-radius: 8px;
 	font-weight: 500;
-	background: ${(props) => (props.isOutlined ? '#fff' : '#835afd')};
-	color: ${(props) => (props.isOutlined ? '#835afd' : '#fff')};
+	background: ${(props) =>
+		props.isOutlined
+			? props.theme.colors.textPrimaryInColor
+			: props.theme.colors.primary};
+	color: ${(props) =>
+		props.isOutlined
+			? props.theme.colors.primary
+			: props.theme.colors.textPrimaryInColor};
 	padding: 0 32px;
 
 	display: flex;
@@ -17,7 +23,8 @@ export const Button = styled.button<ButtonProps>`
 	align-items: center;
 
 	cursor: pointer;
-	border: ${(props) => (props.isOutlined ? '1px solid #835afd' : '0')};
+	border: ${(props) =>
+		props.isOutlined ? '1px solid ' + props.theme.colors.primary : '0'};
 
 	transition: filter 0.2s;
 

@@ -1,12 +1,14 @@
 import { FormEvent, ReactNode, useState } from 'react';
 
-import logoImg from '../../assets/images/logo.svg';
+import logoDarkImg from '../../assets/images/logo-dark.svg';
+import logoLightImg from '../../assets/images/logo-light.svg';
 
 import { Button } from '../../components/Button';
 import { Question } from '../../components/Question';
 import { RoomCode } from '../../components/RoomCode';
 import { useAuth } from '../../hooks/useAuth';
 import { useRoom } from '../../hooks/useRoom';
+import { useTheme } from '../../hooks/useTheme';
 
 import { Header, Main, RoomTitle, Form, QuestionList } from './styles';
 
@@ -41,6 +43,7 @@ export function RoomContainer({
 	const [newQuestion, setNewQuestion] = useState('');
 	const { user } = useAuth();
 	const { title, questions } = useRoom(roomId);
+	const { theme } = useTheme();
 
 	function handleQuestionFormSubmit(event: FormEvent) {
 		event.preventDefault();
@@ -52,7 +55,11 @@ export function RoomContainer({
 		<div>
 			<Header>
 				<div className="content">
-					<img src={logoImg} alt="Letmeask" />
+					{theme.title === 'light' ? (
+						<img src={logoLightImg} alt="Letmeask" />
+					) : (
+						<img src={logoDarkImg} alt="Letmeask" />
+					)}
 					<div>
 						<RoomCode code={roomId} />
 						{admin && (

@@ -9,8 +9,8 @@ export const Form = styled.form`
 		height: 50px;
 		border-radius: 8px;
 		padding: 0 16px;
-		background: #fff;
-		border: 1px solid #a8a8b3;
+		background: ${({ theme }) => theme.colors.white};
+		border: 1px solid ${({ theme }) => theme.colors.border};
 	}
 
 	button {
@@ -28,8 +28,8 @@ export const CreateRoomButton = styled.button`
 	height: 50px;
 	border-radius: 8px;
 	font-weight: 500;
-	background: #ea4335;
-	color: #fff;
+	background: ${({ theme }) => theme.colors.googleColor};
+	color: ${({ theme }) => theme.colors.textPrimaryInColor};
 
 	display: flex;
 	justify-content: center;
@@ -51,7 +51,7 @@ export const CreateRoomButton = styled.button`
 
 export const Separator = styled.div`
 	font-size: 14px;
-	color: #a8a8b3;
+	color: ${({ theme }) => theme.colors.border};
 
 	margin: 32px 0;
 	display: flex;
@@ -61,7 +61,7 @@ export const Separator = styled.div`
 		content: '';
 		flex: 1;
 		height: 1px;
-		background: #a8a8b3;
+		background: ${({ theme }) => theme.colors.border};
 		margin-right: 16px;
 	}
 
@@ -69,7 +69,7 @@ export const Separator = styled.div`
 		content: '';
 		flex: 1;
 		height: 1px;
-		background: #a8a8b3;
+		background: ${({ theme }) => theme.colors.border};
 		margin-left: 16px;
 	}
 `;

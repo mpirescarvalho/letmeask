@@ -1,7 +1,7 @@
 ### New Funcionalities
 
 - [x] Styled Components
-- [ ] Themes
+- [x] Themes
 - [ ] ESLint, Prettier
 - [ ] Use react-toastify
 - [ ] Responsive CSS
