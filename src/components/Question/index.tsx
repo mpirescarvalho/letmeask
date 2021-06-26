@@ -22,9 +22,13 @@ export function Question({
 }: QuestionProps) {
 	return (
 		<Container answered={isAnswered} highlighted={isHighlighted && !isAnswered}>
+			<UserInfo small>
+				<img src={author.avatar} alt={author.name} />
+				<span>{author.name}</span>
+			</UserInfo>
 			<p>{content}</p>
 			<Footer>
-				<UserInfo>
+				<UserInfo medium>
 					<img src={author.avatar} alt={author.name} />
 					<span>{author.name}</span>
 				</UserInfo>

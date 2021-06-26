@@ -2,7 +2,7 @@
 
 - [x] Styled Components
 - [x] Themes
-- [ ] Use react-toastify
-- [ ] Change logo
-- [ ] Responsive CSS
+- [x] Use react-toastify
+- [x] Change logo
+- [x] Responsive CSS
 - [ ] Github README

@@ -1,6 +1,6 @@
 import { FormEvent, ReactNode, useState } from 'react';
 
-import logoDarkImg from '../../assets/images/logo-light.svg';
+import logoDarkImg from '../../assets/images/logo-dark.svg';
 import logoLightImg from '../../assets/images/logo-light.svg';
 
 import { Button } from '../../components/Button';

@@ -41,6 +41,10 @@ export const Container = styled.div<ContainerProps>`
 	p {
 		color: ${({ theme }) => theme.colors.textPrimary};
 	}
+
+	@media (max-width: 375px) {
+		font-size: 16px;
+	}
 `;
 
 export const Footer = styled.footer`
@@ -48,6 +52,10 @@ export const Footer = styled.footer`
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 24px;
+
+	@media (max-width: 375px) {
+		justify-content: flex-end;
+	}
 
 	> div {
 		display: flex;
@@ -87,9 +95,33 @@ export const Footer = styled.footer`
 	}
 `;
 
-export const UserInfo = styled.div`
+type UserInfoProps = {
+	medium?: boolean;
+	small?: boolean;
+};
+
+export const UserInfo = styled.div<UserInfoProps>`
 	display: flex;
 	align-items: center;
+
+	${(props) =>
+		props.medium &&
+		css`
+			@media (max-width: 375px) {
+				display: none !important;
+			}
+		`}
+
+	${(props) =>
+		props.small &&
+		css`
+			@media (min-width: 375px) {
+				display: none !important;
+			}
+
+			margin-bottom: 20px;
+		`}
+
 
 	img {
 		width: 32px;

@@ -4,6 +4,11 @@ export const Container = styled.div`
 	display: flex;
 	align-items: stretch;
 	height: 100vh;
+
+	@media (max-width: 768px) {
+		height: 200vh;
+		flex-direction: column;
+	}
 `;
 
 export const Aside = styled.aside`
@@ -34,6 +39,52 @@ export const Aside = styled.aside`
 		margin-top: 16px;
 		color: ${({ theme }) => theme.colors.textSecondaryInColor};
 	}
+
+	@media (max-width: 768px) {
+		flex: 1;
+		padding: 0 45px;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		img {
+			margin-bottom: 32px;
+		}
+	}
+
+	@media (max-width: 425px) {
+		strong {
+			font-size: 30px;
+			line-height: 36px;
+		}
+
+		p {
+			font-size: 20px;
+			line-height: 26px;
+		}
+	}
+
+	@media (max-width: 375px) {
+		img {
+			max-height: 280px;
+		}
+
+		strong {
+			font-size: 24px;
+			line-height: 28px;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+
+	@media (max-width: 320px) {
+		img {
+			max-height: 220px;
+		}
+	}
 `;
 
 export const Main = styled.main`
@@ -44,6 +95,10 @@ export const Main = styled.main`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	@media (max-width: 768px) {
+		flex: 1;
+	}
 `;
 
 export const Content = styled.div`
@@ -53,4 +108,9 @@ export const Content = styled.div`
 	max-width: 320px;
 	align-items: stretch;
 	text-align: center;
+
+	@media (max-width: 768px) {
+		height: 100vh;
+		justify-content: center;
+	}
 `;

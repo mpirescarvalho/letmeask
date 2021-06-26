@@ -23,12 +23,39 @@ export const Header = styled.header`
 				height: 40px;
 			}
 		}
+
+		@media (max-width: 650px) {
+			flex-direction: column;
+
+			> img {
+				margin-bottom: 24px;
+			}
+
+			> div {
+				flex-direction: column;
+				gap: 8px;
+			}
+		}
+
+		@media (max-width: 425px) {
+			> div > button {
+				height: 35px;
+			}
+		}
 	}
 `;
 
 export const Main = styled.main`
 	max-width: 800px;
 	margin: 0 auto;
+
+	@media (max-width: 900px) {
+		padding: 0 40px;
+	}
+
+	@media (max-width: 425px) {
+		padding: 0 20px;
+	}
 `;
 
 export const RoomTitle = styled.div`
@@ -50,6 +77,14 @@ export const RoomTitle = styled.div`
 		color: ${({ theme }) => theme.colors.textPrimaryInColor};
 		font-weight: 500;
 		font-size: 14px;
+	}
+
+	@media (max-width: 480px) {
+		flex-direction: column;
+		align-items: flex-start;
+		span {
+			margin-left: 0;
+		}
 	}
 `;
 

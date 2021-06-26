@@ -1,7 +1,7 @@
 import { FormEvent, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
-import logoDarkImg from '../../assets/images/logo-light.svg';
+import logoDarkImg from '../../assets/images/logo-dark.svg';
 import logoLightImg from '../../assets/images/logo-light.svg';
 
 import { HomeContainer } from '../../components/HomeContainer';

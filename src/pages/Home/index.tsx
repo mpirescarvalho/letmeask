@@ -2,7 +2,7 @@ import { FormEvent, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-import logoDarkImg from '../../assets/images/logo-light.svg';
+import logoDarkImg from '../../assets/images/logo-dark.svg';
 import logoLightImg from '../../assets/images/logo-light.svg';
 import googleIconImg from '../../assets/images/google-icon.svg';
 
