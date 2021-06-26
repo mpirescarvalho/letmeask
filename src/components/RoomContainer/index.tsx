@@ -1,6 +1,6 @@
 import { FormEvent, ReactNode, useState } from 'react';
 
-import logoDarkImg from '../../assets/images/logo-dark.svg';
+import logoDarkImg from '../../assets/images/logo-light.svg';
 import logoLightImg from '../../assets/images/logo-light.svg';
 
 import { Button } from '../../components/Button';
@@ -56,9 +56,9 @@ export function RoomContainer({
 			<Header>
 				<div className="content">
 					{theme.title === 'light' ? (
-						<img src={logoLightImg} alt="Letmeask" />
+						<img src={logoLightImg} alt="Perguntaê" />
 					) : (
-						<img src={logoDarkImg} alt="Letmeask" />
+						<img src={logoDarkImg} alt="Perguntaê" />
 					)}
 					<div>
 						<RoomCode code={roomId} />

@@ -1,7 +1,7 @@
 import { FormEvent, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
-import logoDarkImg from '../../assets/images/logo-dark.svg';
+import logoDarkImg from '../../assets/images/logo-light.svg';
 import logoLightImg from '../../assets/images/logo-light.svg';
 
 import { HomeContainer } from '../../components/HomeContainer';
@@ -38,9 +38,9 @@ export function NewRoom() {
 	return (
 		<HomeContainer>
 			{theme.title === 'light' ? (
-				<Logo src={logoLightImg} alt="Letmeask" />
+				<Logo src={logoLightImg} alt="Perguntaê" />
 			) : (
-				<Logo src={logoDarkImg} alt="Letmeask" />
+				<Logo src={logoDarkImg} alt="Perguntaê" />
 			)}
 			<Title>Criar uma nova sala</Title>
 			<Form onSubmit={handleCreateRoom}>

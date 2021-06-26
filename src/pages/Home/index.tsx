@@ -2,7 +2,7 @@ import { FormEvent, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-import logoDarkImg from '../../assets/images/logo-dark.svg';
+import logoDarkImg from '../../assets/images/logo-light.svg';
 import logoLightImg from '../../assets/images/logo-light.svg';
 import googleIconImg from '../../assets/images/google-icon.svg';
 
@@ -57,9 +57,9 @@ export function Home() {
 	return (
 		<HomeContainer>
 			{theme.title === 'light' ? (
-				<Logo src={logoLightImg} alt="Letmeask" />
+				<Logo src={logoLightImg} alt="Perguntaê" />
 			) : (
-				<Logo src={logoDarkImg} alt="Letmeask" />
+				<Logo src={logoDarkImg} alt="Perguntaê" />
 			)}
 			<CreateRoomButton onClick={handleCreateRoom}>
 				<img src={googleIconImg} alt="Logo do Google" />
