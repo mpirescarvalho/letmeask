@@ -5,4 +5,4 @@
 - [x] Use react-toastify
 - [x] Change logo
 - [x] Responsive CSS
-- [ ] Github README
+- [x] Github README
