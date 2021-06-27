@@ -13,19 +13,21 @@
 </p>
 
 <p align="center">
+  <b>Generate Q&A rooms and answer the right questions. Perguntaê makes it easier to connect with your audience. In real time.</b>
+</p>
+
+<p align="center">
   <img alt="Perguntae" src=".github/demo.png">
 </p>
 
-Generate Q&A rooms and answer the right questions. Perguntaê makes it easier to connect with your audience. In real time.
-
-## Technologies
+## 🛠 Technologies
 
 - [React](https://reactjs.org)
 - [Styled components](https://styled-components.com/)
 - [Firebase](https://firebase.google.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 
-## Contributing
+## 👨‍💻 Contributing
 
 1. Fork it (<https://github.com/mpirescarvalho/perguntae/fork>)
 2. Create your feature branch (`git checkout -b feature/awesome`)
@@ -33,7 +35,7 @@ Generate Q&A rooms and answer the right questions. Perguntaê makes it easier to
 4. Push to the branch (`git push origin feature/awesome`)
 5. Create a new Pull Request
 
-## Building
+## 🚀 Building
 
 You'll need [Node.js](https://nodejs.org) installed on your computer in order to build this app.
 
@@ -55,7 +57,7 @@ $ npm run start
 
 Runs the app in the development mode.<br/>
 
-## Contact
+## ✉ Contact
 
 <a href="https://github.com/mpirescarvalho">
   <img alt="made by Marcelo Carvalho" src="https://img.shields.io/badge/made%20by-Marcelo Carvalho-%237519C1">
